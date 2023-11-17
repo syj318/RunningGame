@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Running_game
-{ //test
+{
     public partial class Form1 : Form
     {
         const int Height = 840;
@@ -21,7 +21,7 @@ namespace Running_game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //test
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
