@@ -21,7 +21,7 @@ namespace Running_game
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -29,12 +29,13 @@ namespace Running_game
 
         }
 
+        int manSpeed = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            moveline(5);
+            moveline(manSpeed);
         }
 
-      
+
         void moveline(int speed)
         {
             if (pictureBox1.Top >= Height)
@@ -88,7 +89,7 @@ namespace Running_game
 
         }
 
-        
+
 
         private void pictureBox_Man_Click(object sender, EventArgs e)
         {
@@ -99,5 +100,31 @@ namespace Running_game
         {
 
         }
+
+
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                if (PictureBox_Man.Left > 0)
+                    PictureBox_Man.Left += -15;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                if (PictureBox_Man.Right < 845 - PictureBox_Man.Width / 2)
+                    PictureBox_Man.Left += 15;
+            }
+
+            if (e.KeyCode == Keys.Up)
+            {
+                if (manSpeed < 20)
+                {
+                    manSpeed++;
+                }
+            }
+            
+        }
     }
 }
+  
