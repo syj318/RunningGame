@@ -12,6 +12,7 @@ namespace Running_game
 {
     public partial class Form1 : Form
     {
+        
         const int Height = 840;
         const int LineStartTop = -210;
         public Form1()
@@ -29,12 +30,14 @@ namespace Running_game
 
         }
 
-        int manSpeed = 0;
+      
         private void timer1_Tick(object sender, EventArgs e)
         {
-            moveline(manSpeed);
+            moveline(10);
+           
+            
         }
-
+      
 
         void moveline(int speed)
         {
@@ -82,6 +85,7 @@ namespace Running_game
             {
                 pictureBox7.Top += speed;
             }
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -114,16 +118,7 @@ namespace Running_game
             {
                 if (PictureBox_Man.Right < 845 - PictureBox_Man.Width / 2)
                     PictureBox_Man.Left += 15;
-            }
-
-            if (e.KeyCode == Keys.Up)
-            {
-                if (manSpeed < 20)
-                {
-                    manSpeed++;
-                }
-            }
-            
+            } 
         }
     }
 }
