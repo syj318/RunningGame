@@ -28,3 +28,13 @@ C:\Users\유진\Desktop\RunningGame-main\obj\Debug\Running_game.Form1.resources
 C:\Users\유진\Desktop\RunningGame-main\obj\Debug\Running_game.Properties.Resources.resources
 C:\Users\유진\Desktop\RunningGame-main\obj\Debug\Running game.csproj.GenerateResource.cache
 C:\Users\유진\Desktop\RunningGame-main\obj\Debug\Running game.csproj.CoreCompileInputs.cache
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\bin\Debug\Running game.exe.config
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\bin\Debug\Running game.exe
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\bin\Debug\Running game.pdb
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running game.csproj.AssemblyReference.cache
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running_game.Form1.resources
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running_game.Properties.Resources.resources
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running game.csproj.GenerateResource.cache
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running game.csproj.CoreCompileInputs.cache
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running game.exe
+C:\Users\유진\Documents\GitHub\RunningGame\RunningGame-main\obj\Debug\Running game.pdb

@@ -130,6 +130,7 @@
             this.pictureBox_trash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_trash.TabIndex = 14;
             this.pictureBox_trash.TabStop = false;
+            this.pictureBox_trash.Click += new System.EventHandler(this.pictureBox_trash_Click);
             // 
             // Form1
             // 

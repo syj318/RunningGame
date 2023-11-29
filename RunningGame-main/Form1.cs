@@ -143,6 +143,11 @@ namespace Running_game
                     PictureBox_Man.Left += 15;
             } 
         }
+
+        private void pictureBox_trash_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
   
