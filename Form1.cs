@@ -30,12 +30,52 @@ namespace Running_game
 
         }
 
-      
+      void gameover()
+        {
+            if(PictureBox_Man.Bounds.IntersectsWith(pictureBox_object1.Bounds)) 
+            {
+               timer1.Enabled = false;
+                label.Visible = true; 
+            }
+
+            if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_object2.Bounds))
+            {
+                timer1.Enabled = false;
+                label.Visible = true;
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             moveline(10);
-           
-            
+            object1(10);
+            gameover();
+        }
+
+
+        Random r = new Random();
+        int x;
+
+        void object1(int speed)
+        {
+            if (pictureBox_object1.Top >= 840)
+            {
+                x = r.Next(0, 700);
+                pictureBox_object1.Location = new Point(x, 0);
+            }
+            else
+            {
+                pictureBox_object1.Top += speed;
+            }
+
+            if (pictureBox_object2.Top >= 840)
+            {
+                x = r.Next(350, 700);
+                pictureBox_object2.Location = new Point(x, 0);
+            }
+            else
+            {
+                pictureBox_object2.Top += speed;
+            }
         }
       
 
