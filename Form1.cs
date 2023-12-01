@@ -12,7 +12,7 @@ namespace Running_game
 {
     public partial class Form1 : Form
     {
-        
+
         const int Height = 840;
         const int LineStartTop = -210;
         public Form1()
@@ -20,6 +20,37 @@ namespace Running_game
             InitializeComponent();
         }
 
+        int collectedheart = 0;
+
+        void heartCollection()
+        {
+            if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_heart1.Bounds))
+            {
+                collectedheart++;
+                label_hearts.Text = "♥ = " + collectedheart.ToString();
+
+                x = r.Next(0, 200);
+                pictureBox_heart1.Location = new Point(x, 0);
+            }
+
+            if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_heart2.Bounds))
+            {
+                collectedheart++;
+                label_hearts.Text = "♥ = " + collectedheart.ToString();
+
+                x = r.Next(100, 300);
+                pictureBox_heart2.Location = new Point(x, 0);
+            }
+
+            if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_heart3.Bounds))
+            {
+                collectedheart++;
+                label_hearts.Text = "♥ = " + collectedheart.ToString();
+
+                x = r.Next(200, 400);
+                pictureBox_heart3.Location = new Point(x, 0);
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -30,12 +61,12 @@ namespace Running_game
 
         }
 
-      void gameover()
+        void gameover()
         {
-            if(PictureBox_Man.Bounds.IntersectsWith(pictureBox_object1.Bounds)) 
+            if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_object1.Bounds))
             {
-               timer1.Enabled = false;
-                label.Visible = true; 
+                timer1.Enabled = false;
+                label.Visible = true;
             }
 
             if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_object2.Bounds))
@@ -49,8 +80,42 @@ namespace Running_game
             moveline(10);
             object1(10);
             gameover();
+            hearts(10);
+            heartCollection();
         }
 
+        void hearts(int speed)
+        {
+            if (pictureBox_heart1.Top >= 840)
+            {
+                x = r.Next(0, 200);
+                pictureBox_heart1.Location = new Point(x, 0);
+            }
+            else
+            {
+                pictureBox_heart1.Top += speed;
+            }
+
+            if (pictureBox_heart2.Top >= 840)
+            {
+                x = r.Next(100, 300);
+                pictureBox_heart2.Location = new Point(x, 0);
+            }
+            else
+            {
+                pictureBox_heart2.Top += speed;
+            }
+
+            if (pictureBox_heart3.Top >= 840)
+            {
+                x = r.Next(200, 400);
+                pictureBox_heart3.Location = new Point(x, 0);
+            }
+            else
+            {
+                pictureBox_heart3.Top += speed;
+            }
+        }
 
         Random r = new Random();
         int x;
@@ -77,7 +142,7 @@ namespace Running_game
                 pictureBox_object2.Top += speed;
             }
         }
-      
+
 
         void moveline(int speed)
         {
@@ -158,8 +223,7 @@ namespace Running_game
             {
                 if (PictureBox_Man.Right < 845 - PictureBox_Man.Width / 2)
                     PictureBox_Man.Left += 15;
-            } 
+            }
         }
     }
 }
-  

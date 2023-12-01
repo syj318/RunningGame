@@ -42,7 +42,8 @@
             this.label = new System.Windows.Forms.Label();
             this.pictureBox_heart1 = new System.Windows.Forms.PictureBox();
             this.pictureBox_heart2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_haert3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_heart3 = new System.Windows.Forms.PictureBox();
+            this.label_hearts = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_object2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_haert3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart3)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -149,6 +150,7 @@
             this.label.Size = new System.Drawing.Size(459, 80);
             this.label.TabIndex = 15;
             this.label.Text = "Game Over";
+            this.label.Visible = false;
             // 
             // pictureBox_heart1
             // 
@@ -170,15 +172,27 @@
             this.pictureBox_heart2.TabIndex = 16;
             this.pictureBox_heart2.TabStop = false;
             // 
-            // pictureBox_haert3
+            // pictureBox_heart3
             // 
-            this.pictureBox_haert3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_haert3.Image")));
-            this.pictureBox_haert3.Location = new System.Drawing.Point(505, 30);
-            this.pictureBox_haert3.Name = "pictureBox_haert3";
-            this.pictureBox_haert3.Size = new System.Drawing.Size(75, 78);
-            this.pictureBox_haert3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_haert3.TabIndex = 16;
-            this.pictureBox_haert3.TabStop = false;
+            this.pictureBox_heart3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart3.Image")));
+            this.pictureBox_heart3.Location = new System.Drawing.Point(505, 30);
+            this.pictureBox_heart3.Name = "pictureBox_heart3";
+            this.pictureBox_heart3.Size = new System.Drawing.Size(75, 78);
+            this.pictureBox_heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_heart3.TabIndex = 16;
+            this.pictureBox_heart3.TabStop = false;
+            // 
+            // label_hearts
+            // 
+            this.label_hearts.AutoSize = true;
+            this.label_hearts.BackColor = System.Drawing.Color.White;
+            this.label_hearts.Font = new System.Drawing.Font("굴림", 15F);
+            this.label_hearts.ForeColor = System.Drawing.Color.Fuchsia;
+            this.label_hearts.Location = new System.Drawing.Point(12, 18);
+            this.label_hearts.Name = "label_hearts";
+            this.label_hearts.Size = new System.Drawing.Size(60, 20);
+            this.label_hearts.TabIndex = 17;
+            this.label_hearts.Text = "♥ = 0";
             // 
             // Form1
             // 
@@ -186,7 +200,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 801);
-            this.Controls.Add(this.pictureBox_haert3);
+            this.Controls.Add(this.label_hearts);
+            this.Controls.Add(this.pictureBox_heart3);
             this.Controls.Add(this.pictureBox_heart2);
             this.Controls.Add(this.pictureBox_heart1);
             this.Controls.Add(this.PictureBox_Man);
@@ -212,7 +227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_object2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_haert3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +246,8 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.PictureBox pictureBox_heart1;
         private System.Windows.Forms.PictureBox pictureBox_heart2;
-        private System.Windows.Forms.PictureBox pictureBox_haert3;
+        private System.Windows.Forms.PictureBox pictureBox_heart3;
+        private System.Windows.Forms.Label label_hearts;
     }
 }
 
