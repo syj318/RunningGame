@@ -123,12 +123,12 @@ namespace Running_game
             if (e.KeyCode == Keys.Left)
             {
                 if (PictureBox_Man.Left > 0)
-                    PictureBox_Man.Left += -10;
+                    PictureBox_Man.Left += -35;
             }
             if (e.KeyCode == Keys.Right)
             {
                 if (PictureBox_Man.Right < 845 - PictureBox_Man.Width / 2)
-                    PictureBox_Man.Left += 10;
+                    PictureBox_Man.Left += 35;
             }
         }
 
