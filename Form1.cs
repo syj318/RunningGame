@@ -6,41 +6,6 @@ using System.Windows.Forms;
 
 namespace Running_game
 {
-    // 추상 클래스: GameObject (게임 오브젝트를 나타내는 추상 클래스)
-    public abstract class GameObject
-    {
-        // 프로퍼티: PictureBox와 Random
-        protected PictureBox PictureBox { get; private set; }
-        protected Random Random { get; private set; }
-
-        // 프로퍼티: X 좌표
-        protected int X { get; set; }
-
-        // GameObject 클래스의 생성자: PictureBox와 Random을 초기화
-        public GameObject(PictureBox pictureBox, Random random)
-        {
-            PictureBox = pictureBox ?? throw new ArgumentNullException(nameof(pictureBox));
-            Random = random ?? throw new ArgumentNullException(nameof(random));
-        }
-
-        // 추상 메서드: 게임 오브젝트를 이동시키는 역할
-        public abstract void Move(int speed);
-
-        // 메서드: 게임 오브젝트의 위치를 재설정
-        public void ResetLocation(int minX, int maxX)
-        {
-            X = Random.Next(minX, maxX);
-            PictureBox.Location = new Point(X, 0);
-        }
-
-        // 메서드: 게임 오브젝트에 연결된 PictureBox를 반환
-        public PictureBox GetPictureBox()
-        {
-            return PictureBox;
-        }
-    }
-
-    // Form1 클래스: Form, IMovable 인터페이스 상속
     public partial class Form1 : Form
     {
         // 상수: 게임 영역의 높이 및 이동 라인의 시작 위치
@@ -76,6 +41,42 @@ namespace Running_game
             };
         }
 
+        // 추상 클래스: GameObject (게임 오브젝트를 나타내는 추상 클래스)
+        public abstract class GameObject
+    {
+        // 프로퍼티: PictureBox와 Random
+        protected PictureBox PictureBox { get; private set; }
+        protected Random Random { get; private set; }
+
+        // 프로퍼티: X 좌표
+        protected int X { get; set; }
+
+        // GameObject 클래스의 생성자: PictureBox와 Random을 초기화
+        public GameObject(PictureBox pictureBox, Random random)
+        {
+            PictureBox = pictureBox ?? throw new ArgumentNullException(nameof(pictureBox));
+            Random = random ?? throw new ArgumentNullException(nameof(random));
+        }
+
+        // 추상 메서드: 게임 오브젝트를 이동시키는 역할
+        public abstract void Move(int speed);
+
+        // 메서드: 게임 오브젝트의 위치를 재설정
+        public void ResetLocation(int minX, int maxX)
+        {
+            X = Random.Next(minX, maxX);
+            PictureBox.Location = new Point(X, 0);
+        }
+
+        // 메서드: 게임 오브젝트에 연결된 PictureBox를 반환
+        public PictureBox GetPictureBox()
+        {
+            return PictureBox;
+        }
+    }
+
+    // Form1 클래스: Form, IMovable 인터페이스 상속
+    
         // Timer의 Tick 이벤트 핸들러: 게임 상태를 진행
         private void timer1_Tick(object sender, EventArgs e)
         {

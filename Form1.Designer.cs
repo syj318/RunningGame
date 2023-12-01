@@ -122,9 +122,9 @@
             // pictureBox_object1
             // 
             this.pictureBox_object1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_object1.Image")));
-            this.pictureBox_object1.Location = new System.Drawing.Point(75, 106);
+            this.pictureBox_object1.Location = new System.Drawing.Point(30, 165);
             this.pictureBox_object1.Name = "pictureBox_object1";
-            this.pictureBox_object1.Size = new System.Drawing.Size(173, 174);
+            this.pictureBox_object1.Size = new System.Drawing.Size(74, 99);
             this.pictureBox_object1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_object1.TabIndex = 13;
             this.pictureBox_object1.TabStop = false;
@@ -132,9 +132,9 @@
             // pictureBox_object2
             // 
             this.pictureBox_object2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_object2.Image")));
-            this.pictureBox_object2.Location = new System.Drawing.Point(493, 70);
+            this.pictureBox_object2.Location = new System.Drawing.Point(681, 105);
             this.pictureBox_object2.Name = "pictureBox_object2";
-            this.pictureBox_object2.Size = new System.Drawing.Size(292, 264);
+            this.pictureBox_object2.Size = new System.Drawing.Size(91, 58);
             this.pictureBox_object2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_object2.TabIndex = 14;
             this.pictureBox_object2.TabStop = false;
@@ -143,11 +143,11 @@
             // 
             this.label.AutoSize = true;
             this.label.BackColor = System.Drawing.Color.Red;
-            this.label.Font = new System.Drawing.Font("굴림", 60F, System.Drawing.FontStyle.Bold);
+            this.label.Font = new System.Drawing.Font("굴림", 70F, System.Drawing.FontStyle.Bold);
             this.label.ForeColor = System.Drawing.Color.Yellow;
-            this.label.Location = new System.Drawing.Point(154, 310);
+            this.label.Location = new System.Drawing.Point(150, 323);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(459, 80);
+            this.label.Size = new System.Drawing.Size(540, 94);
             this.label.TabIndex = 15;
             this.label.Text = "Game Over";
             this.label.Visible = false;
@@ -155,9 +155,9 @@
             // pictureBox_heart1
             // 
             this.pictureBox_heart1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart1.Image")));
-            this.pictureBox_heart1.Location = new System.Drawing.Point(144, 30);
+            this.pictureBox_heart1.Location = new System.Drawing.Point(237, 93);
             this.pictureBox_heart1.Name = "pictureBox_heart1";
-            this.pictureBox_heart1.Size = new System.Drawing.Size(75, 78);
+            this.pictureBox_heart1.Size = new System.Drawing.Size(51, 50);
             this.pictureBox_heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_heart1.TabIndex = 16;
             this.pictureBox_heart1.TabStop = false;
@@ -165,9 +165,9 @@
             // pictureBox_heart2
             // 
             this.pictureBox_heart2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart2.Image")));
-            this.pictureBox_heart2.Location = new System.Drawing.Point(272, 149);
+            this.pictureBox_heart2.Location = new System.Drawing.Point(589, 480);
             this.pictureBox_heart2.Name = "pictureBox_heart2";
-            this.pictureBox_heart2.Size = new System.Drawing.Size(75, 78);
+            this.pictureBox_heart2.Size = new System.Drawing.Size(51, 48);
             this.pictureBox_heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_heart2.TabIndex = 16;
             this.pictureBox_heart2.TabStop = false;
@@ -175,9 +175,9 @@
             // pictureBox_heart3
             // 
             this.pictureBox_heart3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart3.Image")));
-            this.pictureBox_heart3.Location = new System.Drawing.Point(505, 30);
+            this.pictureBox_heart3.Location = new System.Drawing.Point(609, 49);
             this.pictureBox_heart3.Name = "pictureBox_heart3";
-            this.pictureBox_heart3.Size = new System.Drawing.Size(75, 78);
+            this.pictureBox_heart3.Size = new System.Drawing.Size(51, 50);
             this.pictureBox_heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_heart3.TabIndex = 16;
             this.pictureBox_heart3.TabStop = false;
