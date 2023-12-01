@@ -145,7 +145,7 @@
             this.label.BackColor = System.Drawing.Color.Red;
             this.label.Font = new System.Drawing.Font("굴림", 60F, System.Drawing.FontStyle.Bold);
             this.label.ForeColor = System.Drawing.Color.Yellow;
-            this.label.Location = new System.Drawing.Point(160, 353);
+            this.label.Location = new System.Drawing.Point(154, 310);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(459, 80);
             this.label.TabIndex = 15;
