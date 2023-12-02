@@ -94,6 +94,9 @@ namespace Running_game
             {
                 timer1.Enabled = false; // 타이머 중지
                 label.Visible = true; // 게임 오버 레이블 표시
+                button1.Visible = true;
+                button2.Visible = true;
+                button3.Visible = true;
             }
         }
 
@@ -182,6 +185,24 @@ namespace Running_game
                     PictureBox.Top += speed;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
         }
     }
 }

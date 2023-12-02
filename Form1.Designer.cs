@@ -44,6 +44,9 @@
             this.pictureBox_heart2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_heart3 = new System.Windows.Forms.PictureBox();
             this.label_hearts = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -145,7 +148,7 @@
             this.label.BackColor = System.Drawing.Color.Red;
             this.label.Font = new System.Drawing.Font("굴림", 70F, System.Drawing.FontStyle.Bold);
             this.label.ForeColor = System.Drawing.Color.Yellow;
-            this.label.Location = new System.Drawing.Point(150, 323);
+            this.label.Location = new System.Drawing.Point(145, 183);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(540, 94);
             this.label.TabIndex = 15;
@@ -194,12 +197,57 @@
             this.label_hearts.TabIndex = 17;
             this.label_hearts.Text = "♥ = 0";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("굴림", 50F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Yellow;
+            this.button1.Location = new System.Drawing.Point(212, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(416, 81);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "RESTART";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.Font = new System.Drawing.Font("굴림", 50F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Yellow;
+            this.button2.Location = new System.Drawing.Point(212, 559);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(416, 76);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "CLOSE";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.Font = new System.Drawing.Font("굴림", 50F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.Yellow;
+            this.button3.Location = new System.Drawing.Point(212, 329);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(416, 81);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "RANK";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 801);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label_hearts);
             this.Controls.Add(this.pictureBox_heart3);
             this.Controls.Add(this.pictureBox_heart2);
@@ -214,7 +262,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
-            this.Text = "pictureBox_Man";
+            this.Text = "Running_Game";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -248,6 +296,9 @@
         private System.Windows.Forms.PictureBox pictureBox_heart2;
         private System.Windows.Forms.PictureBox pictureBox_heart3;
         private System.Windows.Forms.Label label_hearts;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
