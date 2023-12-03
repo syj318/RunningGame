@@ -40,3 +40,4 @@ C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running game.exe
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running game.pdb
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form2.resources
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form3.resources
+C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form4.resources

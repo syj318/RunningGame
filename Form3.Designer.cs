@@ -151,6 +151,7 @@
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "삭제";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
             // 
             // btnClose
             // 

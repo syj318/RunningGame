@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
 
 namespace Running_game
 {
     public partial class Form3 : Form
     {
-        Student std = new Student();
+        ExtendedStudent std = new ExtendedStudent();
         const string fname = "data.csv";
+
         public Form3()
         {
             InitializeComponent();
@@ -29,7 +23,40 @@ namespace Running_game
             textBox1.Focus();
         }
 
-        public void AddMember(Student std)
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (File.Exists(fname) == false)
+                {
+                    FileStream fs = new FileStream(fname, FileMode.OpenOrCreate);
+                    fs.Close();
+                }
+                else
+                {
+                    FileStream fs = File.OpenRead(fname);
+                    StreamReader sr = new StreamReader(fs);
+                    while (sr.EndOfStream == false)
+                    {
+                        string data = sr.ReadLine();
+                        if (data == null) { break; }
+                        string[] sitems = data.Split(',');
+                        std.Id = sitems[0].ToString();
+                        std.Name = sitems[1].ToString();
+                        std.Score = sitems[3].ToString();
+                        AddMember(std);
+                    }
+                    sr.Close();
+                    fs.Close();
+                }
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("에러: " + e1.ToString());
+            }
+        }
+
+        public void AddMember(IStudent std)
         {
             string[] sitems = new string[] { std.Id, std.Name, std.Score };
             ListViewItem lvi = new ListViewItem(sitems);
@@ -80,7 +107,7 @@ namespace Running_game
             FileStream fs = File.Create(fname);
             StreamWriter sw = new StreamWriter(fs);
 
-            foreach(ListViewItem lvi in listView1.Items)
+            foreach (ListViewItem lvi in listView1.Items)
             {
                 std.Id = lvi.SubItems[0].Text;
                 std.Name = lvi.SubItems[1].Text;
@@ -90,12 +117,26 @@ namespace Running_game
             sw.Close();
             fs.Close();
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
-    public class Student
+
+    public interface IStudent
+    {
+        string Id { get; set; }
+        string Name { get; set; }
+        string Score { get; set; }
+    }
+
+    public class ExtendedStudent : IStudent
     {
         public string Id { get; set; }
         public string Name { get; set; }

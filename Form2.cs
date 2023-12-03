@@ -24,9 +24,10 @@ namespace Running_game
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            Form1 form1 = new Form1();
-            form1.Show();
+            Form4 form4 = new Form4();
+            form4.Show();
+            //Form1 form1 = new Form1();
+            //form1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
