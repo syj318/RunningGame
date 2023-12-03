@@ -151,7 +151,7 @@ namespace Running_game
                 if (PictureBox_Man.Bounds.IntersectsWith(heart.GetPictureBox().Bounds))
                 {
                     // 수정: Heart 클래스에서 수집된 하트 수를 가져와서 업데이트
-                    collectedHeart += heart.CollectedHeart;
+                    collectedHeart += 1;
                     label_hearts.Text = $"♥ = {collectedHeart}";
                     heart.ResetLocation(0, 400);
                 }
