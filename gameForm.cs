@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Running_game
 {
-    public partial class Form1 : Form
+    public partial class GameForm : Form
     {
         const int Height = 840;
 
@@ -17,7 +17,7 @@ namespace Running_game
 
         List<IMovable> movableObjects;
 
-        public Form1()
+        public GameForm()
         {
             InitializeComponent();
             InitializeGameObjects();
@@ -163,7 +163,7 @@ namespace Running_game
             //... 기존 코드 ...
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void gameForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
@@ -177,7 +177,7 @@ namespace Running_game
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void gameForm_Load(object sender, EventArgs e)
         {
             //... 기존 코드 ...
         }
@@ -207,7 +207,7 @@ namespace Running_game
         private void button1_Click(object sender, EventArgs e)
         {
             Hide();
-            Form1 form1 = new Form1();
+            GameForm form1 = new GameForm();
             form1.Show();
         }
 
@@ -218,7 +218,7 @@ namespace Running_game
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            RankForm form3 = new RankForm();
             form3.Show();
         }
 

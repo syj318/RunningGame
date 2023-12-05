@@ -5,12 +5,12 @@ using System.IO;
 
 namespace Running_game
 {
-    public partial class Form3 : Form
+    public partial class RankForm : Form
     {
         ExtendedStudent std = new ExtendedStudent();
         const string fname = "data.csv";
 
-        public Form3()
+        public RankForm()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace Running_game
             textBox1.Focus();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void rankForm_Load(object sender, EventArgs e)
         {
             try
             {

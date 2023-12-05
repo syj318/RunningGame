@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace Running_game
 {
-    public partial class Form4 : Form
+    public partial class LoginForm : Form
     {
         
     
-        public Form4()
+        public LoginForm()
         {
             InitializeComponent();
             Shown += form_shown;
@@ -28,7 +28,7 @@ namespace Running_game
             {
                 MessageBox.Show("게임을 시작합니다.");
                 this.Hide();
-                Form1 form1 = new Form1();
+                GameForm form1 = new GameForm();
                 form1.Show();
             }
         }

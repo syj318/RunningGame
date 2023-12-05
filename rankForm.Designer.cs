@@ -1,6 +1,6 @@
 ﻿namespace Running_game
 {
-    partial class rankForm
+    partial class RankForm
     {
         /// <summary>
         /// Required designer variable.
@@ -172,7 +172,7 @@
             this.btnFileSave.Text = "저장";
             this.btnFileSave.UseVisualStyleBackColor = true;
             // 
-            // Form3
+            // rankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
-            this.Name = "Form3";
+            this.Name = "rankForm";
             this.Text = "ranking";
             this.ResumeLayout(false);
             this.PerformLayout();

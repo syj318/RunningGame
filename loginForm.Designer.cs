@@ -1,6 +1,6 @@
 ﻿namespace Running_game
 {
-    partial class Form4
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form4
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,7 +67,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
+            this.Name = "LoginForm";
             this.Text = "login";
             this.ResumeLayout(false);
             this.PerformLayout();

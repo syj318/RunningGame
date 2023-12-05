@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Running_game
 {
-    public partial class Form2 : Form
+    public partial class StartForm : Form
     {
-        public Form2()
+        public StartForm()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void startForm_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            LoginForm form4 = new LoginForm();
             form4.Show();
         }
 

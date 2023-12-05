@@ -1,6 +1,6 @@
 ﻿namespace Running_game
 {
-    partial class Form2
+    partial class StartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Running Game";
             // 
-            // Form2
+            // startForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,9 +79,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
+            this.Name = "startForm";
             this.Text = "Running_Game";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.startForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
