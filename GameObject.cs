@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using static Running_game.GameForm;
 using System.Windows.Forms;
+using Running_game.Properties;
+using System.Resources;
 
 namespace Running_game
 {
@@ -13,56 +15,135 @@ namespace Running_game
     public abstract class GameObject //장애물, 하트에 대한 Object추상클래스 생성
     {
         public PictureBox pictureBox; //프로퍼티 : 둘다 이미지 형태
+        public Random random;
+        public int speed = 10;
+        public GameObject()
+        {
+
+            this.pictureBox = new PictureBox();
+        }
         public abstract void Move(); //메서드 : 위에서 아래로 내려오는 기능
-        public abstract PictureBox CreateRamdomPictureBox(); //메서드 : 랜덤으로 이미지가 생성
-        public abstract void CheckPlayerCollision(); //메서드 : 물체와 사람의 충돌을 확인
-        public abstract void RemovePictureBox();
+        public abstract PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources); //메서드 : 랜덤으로 이미지가 생성
+        public abstract bool CheckPlayerCollision(PictureBox PictureBox_Man); //메서드 : 물체와 사람의 충돌을 확인
     }
 
     public class ObstacleObjcet : GameObject //추상클래스 상속 : 장애물
     {
-        public override void CheckPlayerCollision()
+        public int type;
+        public ObstacleObjcet(int type)
         {
-            
+            this.type = type;
+        }
+        public override bool CheckPlayerCollision(PictureBox PictureBox_Man)
+        {
+            try
+            {
+                // 수정: 인덱서를 통해 PictureBox_Man의 좌표 가져오기
+                if (PictureBox_Man.Bounds.IntersectsWith(this.pictureBox.Bounds))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         public override void Move()
         {
-            
+            //this.pictureBox.BringToFront();
+            if (this.pictureBox.Top >= 840)
+            {
+                this.pictureBox.Top = this.random.Next(-100, 0);
+                this.pictureBox.Left = this.random.Next(0, 800);
+            }
+            else
+            {
+                if (this.type == 1)
+                {
+                    this.pictureBox.Top += this.speed;
+                }
+                else
+                {
+                    this.pictureBox.Top += this.speed;
+                }
+
+            }
         }
 
-        public override PictureBox CreateRamdomPictureBox()
+        public override PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources)
         {
-            return pictureBox;
+            if (this.type == 1)
+            {
+                this.pictureBox.Image = (Image)resources.GetObject("obstacle1");
+            }
+            else
+            {
+                this.pictureBox.Image = (Image)resources.GetObject("obstacle2");
+            }
+            this.random = new Random();
+
+            this.pictureBox.Location = new Point(this.random.Next(0, 800), this.random.Next(-100, 0));
+            this.pictureBox.Size = new Size(90, 120);
+            this.pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 20;
+            return this.pictureBox;
         }
 
-        public override void RemovePictureBox()
-        {
-           
-        }
     }
 
     public class HeartObject : GameObject //추상클래스 상속 : 하트
     {
-        public override void CheckPlayerCollision()
+        public override bool CheckPlayerCollision(PictureBox PictureBox_Man)
         {
-            
+
+            try
+            {
+                // 수정: 인덱서를 통해 PictureBox_Man의 좌표 가져오기
+                if (PictureBox_Man.Bounds.IntersectsWith(this.pictureBox.Bounds))
+                {
+                    this.pictureBox.Top = this.random.Next(-100, 0);
+                    this.pictureBox.Left = this.random.Next(0, 800);
+
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
-        public override PictureBox CreateRamdomPictureBox()
+        public override PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources)
         {
-            return pictureBox;
+            this.random = new Random();
+
+            this.pictureBox.Image = (Image)resources.GetObject("heart");
+            this.pictureBox.Location = new Point(this.random.Next(0, 800), this.random.Next(-200, 0));
+            this.pictureBox.Size = new Size(35, 35);
+            this.pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 20;
+
+            return this.pictureBox;
         }
 
         public override void Move()
         {
-            
+
+            if (this.pictureBox.Top >= 840)
+            {
+                this.pictureBox.Top = this.random.Next(-100, 0);
+                this.pictureBox.Left = this.random.Next(0, 800);
+            }
+            else
+            {
+                this.pictureBox.Top += this.speed;
+            }
         }
 
-        public override void RemovePictureBox()
-        {
-           
-        }
     }
 
 
@@ -131,22 +212,22 @@ namespace Running_game
     //        get { return collectedHeart; }
     //    }
     //}
-    private class Obstacle : GameObject<Obstacle>
-    {
-        public Obstacle(PictureBox pictureBox, Random random) : base(pictureBox, random) { }
+    //private class Obstacle : GameObject<Obstacle>
+    //{
+    //    public Obstacle(PictureBox pictureBox, Random random) : base(pictureBox, random) { }
 
-        public override void Move(int speed)
-        {
-            if (PictureBox.Top >= Height)
-            {
-                ResetLocation(0, 700);
-            }
-            else
-            {
-                PictureBox.Top += speed;
-            }
-        }
-    }
+    //    public override void Move(int speed)
+    //    {
+    //        if (PictureBox.Top >= Height)
+    //        {
+    //            ResetLocation(0, 700);
+    //        }
+    //        else
+    //        {
+    //            PictureBox.Top += speed;
+    //        }
+    //    }
+    //}
 }
 
 

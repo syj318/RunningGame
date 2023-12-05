@@ -6,7 +6,7 @@
         /// 필수 디자이너 변수입니다.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private System.ComponentModel.ComponentResourceManager resources;
         /// <summary>
         /// 사용 중인 모든 리소스를 정리합니다.
         /// </summary>
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
+            resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -37,27 +37,18 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.PictureBox_Man = new System.Windows.Forms.PictureBox();
-            this.pictureBox_object1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_object2 = new System.Windows.Forms.PictureBox();
             this.label = new System.Windows.Forms.Label();
-            this.pictureBox_heart1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_heart2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_heart3 = new System.Windows.Forms.PictureBox();
             this.label_hearts = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Man)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_object1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_object2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart3)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -65,6 +56,9 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+
+
+
             // 
             // pictureBox1
             // 
@@ -115,32 +109,12 @@
             // 
             this.PictureBox_Man.BackColor = System.Drawing.Color.Transparent;
             this.PictureBox_Man.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox_Man.Image")));
-            this.PictureBox_Man.Location = new System.Drawing.Point(329, 606);
+            this.PictureBox_Man.Location = new System.Drawing.Point(340, 670);
             this.PictureBox_Man.Name = "PictureBox_Man";
-            this.PictureBox_Man.Size = new System.Drawing.Size(130, 195);
+            this.PictureBox_Man.Size = new System.Drawing.Size(90, 130);
             this.PictureBox_Man.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBox_Man.TabIndex = 12;
             this.PictureBox_Man.TabStop = false;
-            // 
-            // pictureBox_object1
-            // 
-            this.pictureBox_object1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_object1.Image")));
-            this.pictureBox_object1.Location = new System.Drawing.Point(30, 165);
-            this.pictureBox_object1.Name = "pictureBox_object1";
-            this.pictureBox_object1.Size = new System.Drawing.Size(74, 99);
-            this.pictureBox_object1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_object1.TabIndex = 13;
-            this.pictureBox_object1.TabStop = false;
-            // 
-            // pictureBox_object2
-            // 
-            this.pictureBox_object2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_object2.Image")));
-            this.pictureBox_object2.Location = new System.Drawing.Point(681, 105);
-            this.pictureBox_object2.Name = "pictureBox_object2";
-            this.pictureBox_object2.Size = new System.Drawing.Size(91, 58);
-            this.pictureBox_object2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_object2.TabIndex = 14;
-            this.pictureBox_object2.TabStop = false;
             // 
             // label
             // 
@@ -154,36 +128,6 @@
             this.label.TabIndex = 15;
             this.label.Text = "Game Over";
             this.label.Visible = false;
-            // 
-            // pictureBox_heart1
-            // 
-            this.pictureBox_heart1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart1.Image")));
-            this.pictureBox_heart1.Location = new System.Drawing.Point(237, 93);
-            this.pictureBox_heart1.Name = "pictureBox_heart1";
-            this.pictureBox_heart1.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox_heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_heart1.TabIndex = 16;
-            this.pictureBox_heart1.TabStop = false;
-            // 
-            // pictureBox_heart2
-            // 
-            this.pictureBox_heart2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart2.Image")));
-            this.pictureBox_heart2.Location = new System.Drawing.Point(589, 480);
-            this.pictureBox_heart2.Name = "pictureBox_heart2";
-            this.pictureBox_heart2.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox_heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_heart2.TabIndex = 16;
-            this.pictureBox_heart2.TabStop = false;
-            // 
-            // pictureBox_heart3
-            // 
-            this.pictureBox_heart3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_heart3.Image")));
-            this.pictureBox_heart3.Location = new System.Drawing.Point(609, 49);
-            this.pictureBox_heart3.Name = "pictureBox_heart3";
-            this.pictureBox_heart3.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox_heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_heart3.TabIndex = 16;
-            this.pictureBox_heart3.TabStop = false;
             // 
             // label_hearts
             // 
@@ -239,7 +183,12 @@
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // gameForm
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,21 +198,15 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label_hearts);
-            this.Controls.Add(this.pictureBox_heart3);
-            this.Controls.Add(this.pictureBox_heart2);
-            this.Controls.Add(this.pictureBox_heart1);
             this.Controls.Add(this.PictureBox_Man);
             this.Controls.Add(this.label);
-            this.Controls.Add(this.pictureBox_object2);
-            this.Controls.Add(this.pictureBox_object1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "gameForm";
+            this.Name = "GameForm";
             this.Text = "Running_Game";
-            this.Load += new System.EventHandler(this.gameForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -271,11 +214,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Man)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_object1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_object2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_heart3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,16 +227,12 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox PictureBox_Man;
-        private System.Windows.Forms.PictureBox pictureBox_object1;
-        private System.Windows.Forms.PictureBox pictureBox_object2;
         private System.Windows.Forms.Label label;
-        private System.Windows.Forms.PictureBox pictureBox_heart1;
-        private System.Windows.Forms.PictureBox pictureBox_heart2;
-        private System.Windows.Forms.PictureBox pictureBox_heart3;
         private System.Windows.Forms.Label label_hearts;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 
