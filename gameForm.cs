@@ -40,46 +40,46 @@ namespace Running_game
             void Move(int speed);
         }
 
-        public abstract class GameObject<T> : IMovable
-        {
-            protected PictureBox PictureBox { get; private set; }
-            protected Random Random { get; private set; }
+        //public abstract class GameObject<T> : IMovable
+        //{
+        //    protected PictureBox PictureBox { get; private set; }
+        //    protected Random Random { get; private set; }
 
-            protected int X { get; set; }
+        //    protected int X { get; set; }
 
-            public GameObject(PictureBox pictureBox, Random random)
-            {
-                PictureBox = pictureBox ?? throw new ArgumentNullException(nameof(pictureBox));
-                Random = random ?? throw new ArgumentNullException(nameof(random));
-            }
+        //    public GameObject(PictureBox pictureBox, Random random)
+        //    {
+        //        PictureBox = pictureBox ?? throw new ArgumentNullException(nameof(pictureBox));
+        //        Random = random ?? throw new ArgumentNullException(nameof(random));
+        //    }
 
-            public abstract void Move(int speed);
+        //    public abstract void Move(int speed);
 
-            public void ResetLocation(int minX, int maxX)
-            {
-                X = Random.Next(minX, maxX);
-                PictureBox.Location = new Point(X, 0);
-            }
+        //    public void ResetLocation(int minX, int maxX)
+        //    {
+        //        X = Random.Next(minX, maxX);
+        //        PictureBox.Location = new Point(X, 0);
+        //    }
 
-            public PictureBox GetPictureBox()
-            {
-                return PictureBox;
-            }
+        //    public PictureBox GetPictureBox()
+        //    {
+        //        return PictureBox;
+        //    }
 
-            // 인덱서: PictureBox의 위치를 가져오는 인덱서
-            public int this[string coordinate]
-            {
-                get
-                {
-                    if (coordinate.ToLower() == "x")
-                        return PictureBox.Location.X;
-                    else if (coordinate.ToLower() == "y")
-                        return PictureBox.Location.Y;
-                    else
-                        throw new ArgumentException("Invalid coordinate");
-                }
-            }
-        }
+        //    // 인덱서: PictureBox의 위치를 가져오는 인덱서
+        //    public int this[string coordinate]
+        //    {
+        //        get
+        //        {
+        //            if (coordinate.ToLower() == "x")
+        //                return PictureBox.Location.X;
+        //            else if (coordinate.ToLower() == "y")
+        //                return PictureBox.Location.Y;
+        //            else
+        //                throw new ArgumentException("Invalid coordinate");
+        //        }
+        //    }
+        //}
 
         public class Heart : GameObject<Heart>
         {
@@ -92,7 +92,7 @@ namespace Running_game
             {
                 if (PictureBox.Top >= Height)
                 {
-                    ResetLocation(0, 400);
+                    ResetLocation(0, 800);
                 }
                 else
                 {
@@ -194,7 +194,7 @@ namespace Running_game
             {
                 if (PictureBox.Top >= Height)
                 {
-                    ResetLocation(0, 700);
+                    ResetLocation(0, 800);
                 }
                 else
                 {
