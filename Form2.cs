@@ -26,8 +26,6 @@ namespace Running_game
         {
             Form4 form4 = new Form4();
             form4.Show();
-            //Form1 form1 = new Form1();
-            //form1.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

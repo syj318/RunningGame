@@ -27,7 +27,6 @@ C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running game.csproj.GenerateRes
 C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running game.csproj.CoreCompileInputs.cache
 C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running game.exe
 C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running game.pdb
-C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.GameObject.resources
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\bin\Debug\Running game.exe.config
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\bin\Debug\Running game.exe
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\bin\Debug\Running game.pdb
@@ -41,3 +40,7 @@ C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running game.pdb
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form2.resources
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form3.resources
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form4.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form1.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form2.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form3.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form4.resources
