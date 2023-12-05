@@ -52,7 +52,7 @@ namespace Running_game
                 PictureBox = pictureBox ?? throw new ArgumentNullException(nameof(pictureBox));
                 Random = random ?? throw new ArgumentNullException(nameof(random));
             }
-                
+
             public abstract void Move(int speed);
 
             public void ResetLocation(int minX, int maxX)
@@ -127,8 +127,7 @@ namespace Running_game
             try
             {
                 // 수정: 인덱서를 통해 PictureBox_Man의 좌표 가져오기
-                if (this["x", PictureBox_Man] < 0 || this["x", PictureBox_Man] > 845 - PictureBox_Man.Width / 2 ||
-                    PictureBox_Man.Bounds.IntersectsWith(pictureBox_object1.Bounds) ||
+                if (PictureBox_Man.Bounds.IntersectsWith(pictureBox_object1.Bounds) ||
                     PictureBox_Man.Bounds.IntersectsWith(pictureBox_object2.Bounds))
                 {
                     timer1.Enabled = false;

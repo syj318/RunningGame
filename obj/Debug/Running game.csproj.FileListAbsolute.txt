@@ -40,7 +40,7 @@ C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running game.pdb
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form2.resources
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form3.resources
 C:\Users\유진\Desktop\RunningGame-main\RunningGame\obj\Debug\Running_game.Form4.resources
-C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form1.resources
-C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form2.resources
-C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form3.resources
-C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.Form4.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.GameForm.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.StartForm.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.RankForm.resources
+C:\Users\유진이\Desktop\RunningGame\obj\Debug\Running_game.LoginForm.resources
