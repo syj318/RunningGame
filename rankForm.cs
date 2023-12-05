@@ -13,6 +13,8 @@ namespace Running_game
         public RankForm()
         {
             InitializeComponent();
+            textBox2.Text = Program.userName;
+            textBox3.Text = GameForm.collectedHeart.ToString();
         }
 
         public void formClear()

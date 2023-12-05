@@ -12,11 +12,9 @@ namespace Running_game
     public partial class GameForm : Form
     {
 
-        int collectedHeart = 0;
+        static public int collectedHeart = 0;
 
         List<GameObject> Objects = new List<GameObject>();
-
-
 
 
         public GameForm()

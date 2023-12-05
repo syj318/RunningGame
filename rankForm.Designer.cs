@@ -87,6 +87,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(130, 39);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(81, 21);
             this.textBox2.TabIndex = 2;
             // 
@@ -111,9 +112,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(73, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 5;
-            this.label2.Text = "이름";
+            this.label2.Text = "닉네임";
             // 
             // label3
             // 
@@ -172,7 +173,7 @@
             this.btnFileSave.Text = "저장";
             this.btnFileSave.UseVisualStyleBackColor = true;
             // 
-            // rankForm
+            // RankForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +191,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
-            this.Name = "rankForm";
+            this.Name = "RankForm";
             this.Text = "ranking";
             this.ResumeLayout(false);
             this.PerformLayout();

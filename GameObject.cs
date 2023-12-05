@@ -8,23 +8,41 @@ using static Running_game.GameForm;
 using System.Windows.Forms;
 using Running_game.Properties;
 using System.Resources;
+using System.ComponentModel;
 
 namespace Running_game
 {
+    public interface IGameObject
+    {
+        PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources); //메서드 : 랜덤으로 이미지가 생성
+        bool CheckPlayerCollision(PictureBox PictureBox_Man); //메서드 : 물체와 사람의 충돌을 확인
+    }
 
-    public abstract class GameObject //장애물, 하트에 대한 Object추상클래스 생성
+    public abstract class GameObject : IGameObject //장애물, 하트에 대한 Object추상클래스 생성
     {
         public PictureBox pictureBox; //프로퍼티 : 둘다 이미지 형태
         public Random random;
         public int speed = 10;
         public GameObject()
         {
-
             this.pictureBox = new PictureBox();
         }
-        public abstract void Move(); //메서드 : 위에서 아래로 내려오는 기능
-        public abstract PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources); //메서드 : 랜덤으로 이미지가 생성
+        public void Move() //메서드 : 위에서 아래로 내려오는 기능
+        {
+            if (this.pictureBox.Top >= 840)
+            {
+                this.pictureBox.Top = this.random.Next(-100, 0);
+                this.pictureBox.Left = this.random.Next(0, 800);
+            }
+            else
+            {
+                this.pictureBox.Top += this.speed;
+            }
+        }
+
         public abstract bool CheckPlayerCollision(PictureBox PictureBox_Man); //메서드 : 물체와 사람의 충돌을 확인
+
+        public abstract PictureBox CreateRamdomPictureBox(ComponentResourceManager resources);
     }
 
     public class ObstacleObjcet : GameObject //추상클래스 상속 : 장애물
@@ -51,27 +69,6 @@ namespace Running_game
             }
         }
 
-        public override void Move()
-        {
-            //this.pictureBox.BringToFront();
-            if (this.pictureBox.Top >= 840)
-            {
-                this.pictureBox.Top = this.random.Next(-100, 0);
-                this.pictureBox.Left = this.random.Next(0, 800);
-            }
-            else
-            {
-                if (this.type == 1)
-                {
-                    this.pictureBox.Top += this.speed;
-                }
-                else
-                {
-                    this.pictureBox.Top += this.speed;
-                }
-
-            }
-        }
 
         public override PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources)
         {
@@ -128,20 +125,6 @@ namespace Running_game
             this.pictureBox.TabIndex = 20;
 
             return this.pictureBox;
-        }
-
-        public override void Move()
-        {
-
-            if (this.pictureBox.Top >= 840)
-            {
-                this.pictureBox.Top = this.random.Next(-100, 0);
-                this.pictureBox.Left = this.random.Next(0, 800);
-            }
-            else
-            {
-                this.pictureBox.Top += this.speed;
-            }
         }
 
     }

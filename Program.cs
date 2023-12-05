@@ -8,6 +8,7 @@ namespace Running_game
 {
     internal static class Program
     {
+        static public string userName;
         /// <summary>
         /// 해당 애플리케이션의 주 진입점입니다.
         /// </summary>

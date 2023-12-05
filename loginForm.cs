@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Running_game
 {
@@ -26,6 +27,7 @@ namespace Running_game
             }
             else
             {
+                Program.userName = txtID.Text;
                 MessageBox.Show("게임을 시작합니다.");
                 this.Hide();
                 GameForm form1 = new GameForm();
