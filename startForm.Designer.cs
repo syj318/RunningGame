@@ -81,7 +81,6 @@
             this.Controls.Add(this.button1);
             this.Name = "startForm";
             this.Text = "Running_Game";
-            this.Load += new System.EventHandler(this.startForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
