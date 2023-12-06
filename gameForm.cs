@@ -23,6 +23,14 @@ namespace Running_game
             InitializeThread();
         }
 
+        public RankForm RankForm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void InitializeThread() //게임 객체들을 초기화하는 메서드. 장애물과 하트 객체들을 초기화 하고 폼에 추가한다.
         { 
             this.Objects = new List<GameObject> { 

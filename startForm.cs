@@ -17,7 +17,14 @@ namespace Running_game //네임스페이스 정의. 이름은 Running_game
             InitializeComponent(); //디자이너에서 생성된 코드 초기화
         }
 
-       
+        public LoginForm LoginForm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e) //button_1을 클릭할때 실행되는 이벤트 핸들러
         {
             LoginForm form4 = new LoginForm(); //LoginForm 인스턴스를 생성하고

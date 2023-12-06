@@ -14,6 +14,14 @@ namespace Running_game //현재 코드가 속해있는 네임스페이스 정의
             Shown += form_shown; //Shown 이벤트에 form_shown 메서드를 추가함.
         }
 
+        public GameForm GameForm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void form_shown(object sender, EventArgs e) //폼이 화면에 표시될때 실행되는 이벤트 핸들러. 
         {
             txtID.Focus(); //txtID 텍스트상자에 포커스를 설정한다.

@@ -14,6 +14,8 @@ namespace Running_game
 {
     public interface IGameObject //IGameObject 인터페이스 선언
     {
+        GameForm GameForm { get; set; }
+
         PictureBox CreateRamdomPictureBox(System.ComponentModel.ComponentResourceManager resources); //메서드 : 랜덤으로 이미지가 생성되는 메서드 선언
         bool CheckPlayerCollision(PictureBox PictureBox_Man); //메서드 : 물체와 사람의 충돌을 확인하는 메서드 선언
     }

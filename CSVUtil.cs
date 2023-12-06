@@ -13,6 +13,14 @@ namespace Running_game
 {
     public static class CSVUtil //정적 클래스 CSVUil 클래스 정의
     {
+        public static RankForm RankForm
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static List<ListViewItem> LoadCSV() //LoadCSV 메서드 정의, CSV파일을 읽어서 데이터를 ListViewItem 형태로 반환한다. 
         {
             ListViewItem item; //ListViewItem 객체 선언
