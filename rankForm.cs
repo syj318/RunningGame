@@ -1,66 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
-using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Running_game
 {
     public partial class RankForm : Form
     {
-        ExtendedStudent std = new ExtendedStudent();
-        const string fname = "data.csv";
-
+  
         public RankForm()
         {
             InitializeComponent();
-            textBox2.Text = Program.userName;
-            textBox3.Text = GameForm.collectedHeart.ToString();
+            
+            string[] sitems = new string[] { Program.userName, GameForm.collectedHeart.ToString() };
+            ListViewItem lvi = new ListViewItem(sitems);
+            listView1.Items.Add(lvi);
+            List<ListViewItem> list = CSVUtil.LoadCSV();
+            list.ForEach(item => { listView1.Items.Add(item); });
+
         }
 
-        public void formClear()
+       
+        public void AddMember(string name , string score)
         {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-            textBox1.Focus();
-        }
-
-        private void rankForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists(fname) == false)
-                {
-                    FileStream fs = new FileStream(fname, FileMode.OpenOrCreate);
-                    fs.Close();
-                }
-                else
-                {
-                    FileStream fs = File.OpenRead(fname);
-                    StreamReader sr = new StreamReader(fs);
-                    while (sr.EndOfStream == false)
-                    {
-                        string data = sr.ReadLine();
-                        if (data == null) { break; }
-                        string[] sitems = data.Split(',');
-                        std.Id = sitems[0].ToString();
-                        std.Name = sitems[1].ToString();
-                        std.Score = sitems[3].ToString();
-                        AddMember(std);
-                    }
-                    sr.Close();
-                    fs.Close();
-                }
-            }
-            catch (Exception e1)
-            {
-                MessageBox.Show("에러: " + e1.ToString());
-            }
-        }
-
-        public void AddMember(IStudent std)
-        {
-            string[] sitems = new string[] { std.Id, std.Name, std.Score };
+            string[] sitems = new string[] { name, name };
             ListViewItem lvi = new ListViewItem(sitems);
             listView1.Items.Add(lvi);
             listView1.EndUpdate();
@@ -69,55 +33,11 @@ namespace Running_game
         private void button1_Click(object sender, EventArgs e)
         {
             listView1.BeginUpdate();
-            std.Id = textBox1.Text.ToString();
-            std.Name = textBox2.Text.ToString();
-            std.Score = textBox3.Text.ToString();
-            AddMember(std);
-            formClear();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                listView1.SelectedItems[0].SubItems[0].Text = textBox1.Text;
-                listView1.SelectedItems[0].SubItems[1].Text = textBox2.Text;
-                listView1.SelectedItems[0].SubItems[2].Text = textBox3.Text;
-            }
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                textBox1.Text = listView1.SelectedItems[0].SubItems[0].Text;
-                textBox2.Text = listView1.SelectedItems[0].SubItems[1].Text;
-                textBox3.Text = listView1.SelectedItems[0].SubItems[2].Text;
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                listView1.Items.Remove(listView1.SelectedItems[0]);
-            }
-        }
-
-        private void btnFileSave_Click(object sender, EventArgs e)
-        {
-            FileStream fs = File.Create(fname);
-            StreamWriter sw = new StreamWriter(fs);
-
-            foreach (ListViewItem lvi in listView1.Items)
-            {
-                std.Id = lvi.SubItems[0].Text;
-                std.Name = lvi.SubItems[1].Text;
-                std.Score = lvi.SubItems[2].Text;
-                sw.WriteLine("{0},{1},{2}", std.Id, std.Name, std.Score);
-            }
-            sw.Close();
-            fs.Close();
+            string name = textBox1.Text.ToString();
+            string score = textBox2.Text.ToString();
+     
+            AddMember(name,score);
+            //formClear();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -127,21 +47,36 @@ namespace Running_game
 
         private void btnClear_Click_1(object sender, EventArgs e)
         {
-
+            if(listView1.SelectedItems.Count > 0)
+            {
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+            }
         }
+
+        private void btnFileSave_Click(object sender, EventArgs e)
+        {
+            List<ListViewItem> listViewItemsList = listView1.Items.Cast<ListViewItem>().ToList();
+            CSVUtil.SaveCSV(listViewItemsList);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                listView1.SelectedItems[0].SubItems[0].Text = textBox1.Text;
+                listView1.SelectedItems[0].SubItems[1].Text = textBox2.Text;
+            }
+        }
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                textBox1.Text = listView1.SelectedItems[0].Text;
+                textBox1.Text = listView1.SelectedItems[1].Text;
+            }
+        }
+
     }
 
-    public interface IStudent
-    {
-        string Id { get; set; }
-        string Name { get; set; }
-        string Score { get; set; }
-    }
-
-    public class ExtendedStudent : IStudent
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Score { get; set; }
-    }
+   
 }
