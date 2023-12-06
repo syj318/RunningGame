@@ -17,7 +17,7 @@ namespace Running_game
         {
             ListViewItem item; //ListViewItem 객체 선언
 
-            List<ListViewItem> list = new List<ListViewItem>(); //ListViewItem 저장할 리스트 선언.
+            List<ListViewItem> list = new List<ListViewItem>(); //제네릭: Objects는 제네릭 List로, GameObject 형식의 객체들을 저장하는데 사용된다. ListViewItem 저장할 리스트 선언.
 
             string[] buff = File.ReadAllLines("test.csv", Encoding.UTF8); //test.csv 파일에서 모든 행을 읽어와서 문자열 배열에 저장한다.
 

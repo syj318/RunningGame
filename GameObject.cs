@@ -18,7 +18,7 @@ namespace Running_game
         bool CheckPlayerCollision(PictureBox PictureBox_Man); //메서드 : 물체와 사람의 충돌을 확인하는 메서드 선언
     }
 
-    public abstract class GameObject : IGameObject //장애물, 하트에 대한 IGameObject 인터페이스를 구현하는 GameObject추상클래스 선언
+    public abstract class GameObject : IGameObject //추상클래스: 장애물, 하트에 대한 IGameObject 인터페이스를 구현하는 GameObject추상클래스 선언
     {
         public PictureBox pictureBox; //{ get; set; } //프로퍼티 : 장애물, 하트 둘다 이미지 형태
         public Random random; //{ get; set; } //프로퍼티: 장애물, 하트 둘다 랜덤함.

@@ -12,7 +12,7 @@ namespace Running_game
     public partial class GameForm : Form //GameForm 클래스 정의
     {
 
-        static public int collectedHeart = 0; //GameForm 클래스 내에서 정적으로 사용되는 정수형 변수 collectedHeart 선언하고 초기값을 0으로 설정한다. 게임중 획득한 하트의 개수를 저장하는 변수이다.
+        static public int collectedHeart = 0; //GameForm 클래스 내에서 정적으로 사용되는 정수형 프로퍼티, collectedHeart 선언하고 초기값을 0으로 설정한다. 게임중 획득한 하트의 개수를 저장하는 변수이다.
 
         List<GameObject> Objects = new List<GameObject>(); //GameObject 클래스의 인스턴스들을 저장하는 List를 선언하고 초기화한다. 게임 내에서 움직이는 여러 객체를 관리하기 위한 리스트.
 
@@ -20,7 +20,7 @@ namespace Running_game
         public GameForm() //GameForm 클래스의 생성자
         {
             InitializeComponent();
-            InitializeThread(); //게임 객체들을 초기화하고 폼에 추가한다.
+            InitializeThread();
         }
 
         private void InitializeThread() //게임 객체들을 초기화하는 메서드. 장애물과 하트 객체들을 초기화 하고 폼에 추가한다.
