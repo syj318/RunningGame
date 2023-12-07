@@ -25,6 +25,9 @@ namespace Running_game
         public PictureBox pictureBox; //{ get; set; } //프로퍼티 : 장애물, 하트 둘다 이미지 형태
         public Random random; //{ get; set; } //프로퍼티: 장애물, 하트 둘다 랜덤함.
         public int speed = 10; //기본값이 10인 정수형 speed 필드를 선언함.
+
+        public GameForm GameForm { get => throw new NotImplementedException(); set => throw new NotImplementedException(); } //GameForm 속성 정의
+
         public GameObject() //GameObject 클래스의 생성자
         {
             this.pictureBox = new PictureBox(); //새로운 PictureBox 인스턴스로 초기화함.
